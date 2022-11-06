@@ -1,0 +1,17 @@
+package javaFile;
+import java.util.Comparator;
+import java.util.List;
+
+public class HeightSortStrategy implements SortStrategy {
+    @Override
+    public void customSort(List<Person> people) {
+        // YOU ARE NOT ALLOWED TO MODIFY THE CODE ABOVE THIS COMMENT !!
+        // YOU MAY ADD UP TO 5 LINES OF CODE BELOW THIS COMMENT !! A LINE OF CODE MAY CONTAIN UP TO ONE SEMI-COLON !!
+    	Comparator<Person> cmp = new Comparator<Person>() {
+			@Override
+			public int compare(Person o1, Person o2) {
+				return Integer.valueOf(o1.getHeight().compareTo(Integer.valueOf(o2.getHeight())));
+			}}; people.sort(cmp);
+    }
+
+}
